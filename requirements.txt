@@ -9,3 +9,5 @@ tqdm
 open3d
 trimesh
 zmq
+mediapipe==0.10.9
+pyrealsense2

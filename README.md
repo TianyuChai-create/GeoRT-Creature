@@ -77,6 +77,9 @@ such as
 ```
 python geort/env/hand.py --hand allegro_right
 ```
+```
+python geort/env/hand.py --hand creature_left
+```
 <span style="color:red"> If there is any segmentation error, please simplify the collision meshes or just remove all the `<collision>` fields in your URDF. </span> See the [Notes and Troubleshooting](#notes-and-troubleshooting) section.
 
 ### Step 2: Collect human hand mocap data.

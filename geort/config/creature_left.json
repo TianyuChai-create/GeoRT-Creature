@@ -1,0 +1,53 @@
+{
+    "name": "creature_left", 
+    "urdf_path": "./assets/creature_left/creature_hand_left.urdf",
+
+    "base_link": "base_link",
+
+    "joint_order": [
+        "joint_wr_ru", "joint_wr_fe",
+        "joint_th_cmc_aa", "joint_th_cmc_fe", "joint_th_mcp_fe", "joint_th_dip_fe",
+        "joint_in_mcp_aa", "joint_in_mcp_fe", "joint_in_pip_fe", "joint_in_dip_fe",
+        "joint_mi_mcp_aa", "joint_mi_mcp_fe", "joint_mi_pip_fe", "joint_mi_dip_fe",
+        "joint_ri_mcp_aa", "joint_ri_mcp_fe", "joint_ri_pip_fe", "joint_ri_dip_fe",
+        "joint_li_mcp_aa", "joint_li_mcp_fe", "joint_li_pip_fe", "joint_li_dip_fe"
+    ],
+
+    "fingertip_link": [
+        {
+            "name": "thumb",
+            "link": "tip_th_dis",
+            "joint": ["joint_th_cmc_aa", "joint_th_cmc_fe", "joint_th_mcp_fe", "joint_th_dip_fe"],
+            "center_offset": [0.0, 0.0, 0.0],
+            "human_hand_id": 4
+        },
+        {
+            "name": "index",
+            "link": "tip_in_dis",
+            "joint": ["joint_in_mcp_aa", "joint_in_mcp_fe", "joint_in_pip_fe", "joint_in_dip_fe"],
+            "center_offset": [0.0, 0.0, 0.0],
+            "human_hand_id": 8
+        },
+        {
+            "name": "middle",
+            "link": "tip_mi_dis",
+            "joint": ["joint_mi_mcp_aa", "joint_mi_mcp_fe", "joint_mi_pip_fe", "joint_mi_dip_fe"],
+            "center_offset": [0.0, 0.0, 0.0],
+            "human_hand_id": 12
+        },
+        {
+            "name": "ring",
+            "link": "tip_ri_dis",
+            "joint": ["joint_ri_mcp_aa", "joint_ri_mcp_fe", "joint_ri_pip_fe", "joint_ri_dip_fe"],
+            "center_offset": [0.0, 0.0, 0.0],
+            "human_hand_id": 16
+        },
+        {
+            "name": "little",
+            "link": "tip_li_dis",
+            "joint": ["joint_li_mcp_aa", "joint_li_mcp_fe", "joint_li_pip_fe", "joint_li_dip_fe"],
+            "center_offset": [0.0, 0.0, 0.0],
+            "human_hand_id": 20
+        }
+    ]
+}

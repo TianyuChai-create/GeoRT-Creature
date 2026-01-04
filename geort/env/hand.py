@@ -51,8 +51,10 @@ class HandKinematicModel:
             scene_config.default_restitution = 0.00
             scene_config.contact_offset = 0.02
             scene_config.enable_pcm = False
-            scene_config.solver_iterations = 25
-            scene_config.solver_velocity_iterations = 1
+            # scene_config.solver_iterations = 25
+            # scene_config.solver_velocity_iterations = 1
+            scene_config.solver_iterations = 80
+            scene_config.solver_velocity_iterations = 4
             scene = engine.create_scene(scene_config)  
             self.engine = engine 
 
@@ -187,7 +189,8 @@ class HandKinematicModel:
 class HandViewerEnv:
     def __init__(self, model):
         scene = model.get_scene()
-        scene.set_timestep(1 / 100.0) 
+        # scene.set_timestep(1 / 100.0) 
+        scene.set_timestep(1 / 500.0) 
         scene.set_ambient_light([0.5, 0.5, 0.5])
         scene.add_directional_light([0, 1, -1], [0.5, 0.5, 0.5], shadow=True)
         scene.add_ground(altitude=0) 
